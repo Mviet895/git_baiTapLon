@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/editTrangChu/editHeader.css">
+    <link rel="stylesheet" href="../css/editTrangChu/editMenu.css">
+    <link rel="stylesheet" href="../css/editMuaHang/editMenu.css">
+    <link rel="stylesheet" href="../css/editTrangChu/editContent.css">
+    <link rel="stylesheet" href="../css/editTrangChu/editFooter.css">
+    <script src="../js/bootstrap.min.js"></script>
+    <title>MUA HÀNG</title>
+    <style>
+        [col*=] {
+            padding: 0;
+            margin: 0;
+        }
+        
+        * {
+            padding: 0px;
+            margin: 0px auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .wrapper {
+            height: 24000px;
+            width: 1200px;
+            box-sizing: border-box;
+            border: 1px solid black;
+        }
+        
+        header {
+            position: relative;
+            height: 200px;
+            width: 100%;
+            background-color: rgb(108, 154, 224);
+        }
+        
+        .menu {
+            height: 50px;
+            width: 100%;
+            background-color: rgb(7, 63, 147);
+        }
+        
+        .contentPhone {
+            height: 20000px;
+            width: 100%;
+        }
+        
+        footer {
+            height: 150px;
+            width: 100%;
+            background-color: rgb(108, 154, 224);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="../img/background/logoIUH.jpg" alt="" width="100%" height="100%" class="logo">
+            <div class="tuaDe">
+                <h2>CỬA HÀNG ĐIỆN THOẠI</h2>
+                <h2>TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP TPHCM</h2>
+            </div>
+        </header>
+
+        <div class="menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2" id="choice"><a href="../html/TrangChu.html">ĐĂNG XUẤT</a></div>
+                    <div class="col-md-2" id="choice"><a href="../html/GioiThieu.html">GIỚI THIỆU</a></div>
+                    <div class="col-md-2" id="choice"><a href="../html/MuaHang.html">MUA HÀNG</a></div>
+                    <div class="col-md-2" id="choice"><a href="../html/XemGioHang.html">XEM GIỎ HÀNG</a></div>
+                    <div class="col-md-4">
+                        <form action="" class="myFRM">
+                            <input type="text" placeholder="Tìm kiếm ở đây" style="width: 300px;">
+                            <button type="submit">TÌM KIẾM</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contentPhone">
+            <div class="container mt-4">
+                <h2 class="mb-4 text-center">Các sản phẩm hiện có</h2>
+                <div class="row" id="phone-list">
+                    <!-- Sản phẩm sẽ được thêm ở đây bằng JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img src="../img/Others/iconDienThoai.jpg" alt="" class="iconDT">
+                    </div>
+
+                    <div class="col-sm-6">
+                        <h4>CỬA HÀNG ĐIỆN THOẠI</h4>
+                        <h4>TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP TPHCM</h4>
+                        <h6>Hân hạnh được phục vụ quý khách, giảng viên và sinh viên !</h6>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <img src="../img/Others/iconMayTinhBang.png" alt="" class="iconMTB">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/phanXuLy/hienThiSanPham.js"></script>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+</body>
+
+</html>

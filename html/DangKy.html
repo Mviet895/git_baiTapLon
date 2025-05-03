@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/editTrangChu/editHeader.css">
+    <link rel="stylesheet" href="../css/editTrangChu/editMenu.css">
+    <link rel="stylesheet" href="../css/editTrangChu/editContent.css">
+    <link rel="stylesheet" href="../css/editTrangChu/editFooter.css">
+    <link rel="stylesheet" href="../css/editDangKy/editPhanDangKy.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/phanXuLy/kiemTraDangKy.js"></script>
+    <script src="../js/phanXuLy/luuTaiKhoan.js"></script>
+    <title>ĐĂNG KÝ</title>
+    <style>
+        [col*=] {
+            padding: 0;
+            margin: 0;
+        }
+        
+        * {
+            padding: 0px;
+            margin: 0px auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .wrapper {
+            height: 1200px;
+            width: 1200px;
+            background-image: url(../img/background/bgDangNhap.jpg);
+            box-sizing: border-box;
+            border: 1px solid black;
+        }
+        
+        header {
+            position: relative;
+            height: 200px;
+            width: 100%;
+            background-color: rgb(108, 154, 224);
+        }
+        
+        .menu {
+            height: 50px;
+            width: 100%;
+            background-color: rgb(7, 63, 147);
+        }
+        
+        .apply {
+            height: 800px;
+            width: 100%;
+        }
+        
+        footer {
+            height: 150px;
+            width: 100%;
+            background-color: rgb(108, 154, 224);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="../img/background/logoIUH.jpg" alt="" width="100%" height="100%" class="logo">
+            <div class="tuaDe">
+                <h2>CỬA HÀNG ĐIỆN THOẠI</h2>
+                <h2>TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP TPHCM</h2>
+            </div>
+        </header>
+
+        <div class="menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2" id="choice"><a href="#">TRANG CHỦ</a></div>
+                    <div class="col-md-2" id="choice"><a href="#">GIỚI THIỆU</a></div>
+                    <div class="col-md-2" id="choice"><a href="#">MUA HÀNG</a></div>
+                    <div class="col-md-2" id="choice"><a href="#">XEM GIỎ HÀNG</a></div>
+                    <div class="col-md-4">
+                        <form action="" class="myFRM">
+                            <input type="text" placeholder="Tìm kiếm ở đây" style="width: 300px;">
+                            <button type="submit">TÌM KIẾM</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="apply">
+            <div class="tieuDe">
+                <br>
+                <h4>ĐĂNG KÝ TÀI KHOẢN</h4>
+            </div>
+
+            <div class="phanDangKy">
+                <form action="#" class="frmDangKy" id="myfrmDangKy">
+                    <!-- Họ và tên -->
+                    <div class="row mb-3">
+                        <label for="hoTen" class="col-sm-3 col-form-label">Họ và tên</label>
+                        <input type="text" class="col-sm-9 col-form-control" id="hoTen" name="hoTen" placeholder="Nhập họ tên" required onblur="kiemTraTen()">
+                        <span class="text-danger" id="errTen">*</span>
+                    </div>
+
+                    <!-- Ngày sinh -->
+                    <div class="row mb-3">
+                        <label for="ngaySinh" class="col-sm-3 col-form-label">Ngày sinh</label>
+                        <input type="date" class="col-sm-9 col-form-control" id="ngaySinh" name="ngaySinh" required onblur="kiemTraNgaySinh()">
+                        <span class="text-danger" id="errNS">*</span>
+                    </div>
+
+                    <!-- Nơi sinh -->
+                    <div class="row mb-3">
+                        <label for="noiSinh" class="col-sm-3 col-form-label">Nơi sinh</label>
+                        <input type="text" class="col-sm-9 col-form-control" id="noiSinh" name="noiSinh" placeholder="Nhập nơi sinh" required onblur="kiemTraNoiSinh()">
+                        <span class="text-danger" id="errNoi"></span>
+                    </div>
+
+                    <!-- Địa chỉ nhà -->
+                    <div class="row mb-3">
+                        <label for="noiSinh" class="col-sm-3 col-form-label">Địa chỉ nhà</label>
+                        <input type="text" class="col-sm-9 col-form-control" id="diaChi" placeholder="Nhập địa chỉ" required>
+                        <span class="text-danger" id="errNoi"></span>
+                    </div>
+
+                    <!-- Số điện thoại -->
+                    <div class="row mb-3">
+                        <label for="soDienThoai" class="col-sm-3 col-form-label">Số điện thoại</label>
+                        <input type="tel" class="col-sm-9 col-form-control" id="soDienThoai" name="soDienThoai" placeholder="Nhập số điện thoại" required onblur="kiemTraSDT()">
+                        <span class="text-danger" id="errSDT"></span>
+                    </div>
+
+                    <!--Email-->
+                    <div class="row mb-3">
+                        <label for="email" class="col-sm-3 col-form-label">Email</label>
+                        <input type="text" class="col-sm-9 col-form-control" id="email" name="email" placeholder="Nhập email" required onblur="kiemTraEmail()">
+                        <span class="text-danger" id="errEmail"></span>
+                    </div>
+
+                    <!-- Mật khẩu -->
+                    <div class="row mb-3">
+                        <label for="noiSinh" class="col-sm-3 col-form-label">Mật khẩu</label>
+                        <input type="text" class="col-sm-9 col-form-control" id="matKhau" placeholder="Nhập mật khẩu" required>
+                        <span class="text-danger" id="errNoi"></span>
+                    </div>
+
+                    <!-- Ảnh đại diện -->
+                    <div class="row mb-3">
+                        <label for="anhDaiDien" class="col-sm-3 col-form-label">Ảnh đại diện</label>
+                        <input type="file" class="col-sm-9 col-form-control" id="anhDaiDien" name="anhDaiDien" accept="image/*" required onblur="kiemTraAnhDaiDien()">
+                        <span class="text-danger" id="errAnh"></span>
+                    </div>
+
+                    <!--Nút bấm-->
+                    <div class="row mb-3">
+                        <div class="col-sm-8 offset-sm-4">
+                            <button type="submit" class="btn btn-success"><a href="../html/MuaHang.html" style="text-decoration: none; color: white;">Đăng ký</a></button>
+                            <button type="submit" class="btn btn-primary"><a href="../html/TrangChu.html" style="text-decoration: none; color: white;">Quay lại</a></button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Nơi hiển thị thông tin -->
+                <div id="thongTinNguoiDung" class="mt-4"></div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img src="../img/Others/iconDienThoai.jpg" alt="" class="iconDT">
+                    </div>
+
+                    <div class="col-sm-6">
+                        <h4>CỬA HÀNG ĐIỆN THOẠI</h4>
+                        <h4>TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP TPHCM</h4>
+                        <h6>Hân hạnh được phục vụ quý khách, giảng viên và sinh viên !</h6>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <img src="../img/Others/iconMayTinhBang.png" alt="" class="iconMTB">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

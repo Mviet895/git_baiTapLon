@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/editTrangChu/editHeader.css">
+    <link rel="stylesheet" href="../css/editTrangChu/editMenu.css">
+    <link rel="stylesheet" href="../css/editTrangChu/editContent.css">
+    <link rel="stylesheet" href="../css/editTrangChu/editFooter.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/phanXuLy/kiemTraDangNhap.js"></script>
+    <title>TRANG CHỦ</title>
+    <style>
+        [col*=] {
+            padding: 0;
+            margin: 0;
+        }
+        
+        * {
+            padding: 0px;
+            margin: 0px auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .wrapper {
+            height: 1000px;
+            width: 1200px;
+            background-image: url(../img/background/bgDangNhap.jpg);
+            box-sizing: border-box;
+            border: 1px solid black;
+        }
+        
+        header {
+            position: relative;
+            height: 200px;
+            width: 100%;
+            background-color: rgb(108, 154, 224);
+        }
+        
+        .menu {
+            height: 50px;
+            width: 100%;
+            background-color: rgb(7, 63, 147);
+        }
+        
+        .content {
+            height: 600px;
+            width: 100%;
+        }
+        
+        footer {
+            height: 150px;
+            width: 100%;
+            background-color: rgb(108, 154, 224);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="../img/background/logoIUH.jpg" alt="" width="100%" height="100%" class="logo">
+            <div class="tuaDe">
+                <h2>CỬA HÀNG ĐIỆN THOẠI</h2>
+                <h2>TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP TPHCM</h2>
+            </div>
+        </header>
+
+        <div class="menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2" id="choice"><a href="../html/TrangChu.html">TRANG CHỦ</a></div>
+                    <div class="col-md-2" id="choice"><a href="../html/GioiThieu.html">GIỚI THIỆU</a></div>
+                    <div class="col-md-2" id="choice"><a href="#">MUA HÀNG</a></div>
+                    <div class="col-md-2" id="choice"><a href="#">XEM GIỎ HÀNG</a></div>
+                    <div class="col-md-4">
+                        <form action="" class="myFRM">
+                            <input type="text" placeholder="Tìm kiếm ở đây" style="width: 300px;">
+                            <button type="submit">TÌM KIẾM</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="phanDangNhap">
+                <form class="frmDangNhap">
+                    <h3>ĐĂNG NHẬP</h3>
+                    <div class="row mb-3">
+                        <label class="col-sm-3 col-form-label">Email</label>
+                        <div class="col-sm-9">
+                            <input type="email" id="matKhauDangNhap" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-3 col-form-label">Mật khẩu</label>
+                        <div class="col-sm-9">
+                            <input type="text" id="matKhauDangNhap" class="form-control">
+                        </div>
+                        <div class="col-sm-8  offset-sm-4">
+                            <span>Hãy đến 1 góc vắng người để nhập !</span>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-sm-8 offset-sm-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" required>
+                                <label class="form-check-label">
+                                Tôi không phải là Robot
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-sm-7 offset-sm-5">
+                    <button type="submit" class="btn btn-success"><a href="../html/MuaHang.html" style="text-decoration: none; color: white;">Đăng nhập</a></button>
+                    <button type="submit" class="btn btn-primary"><a href="../html/DangKy.html" style="text-decoration: none; color: white;">Đăng ký</a></button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img src="../img/Others/iconDienThoai.jpg" alt="" class="iconDT">
+                    </div>
+
+                    <div class="col-sm-6">
+                        <h4>CỬA HÀNG ĐIỆN THOẠI</h4>
+                        <h4>TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP TPHCM</h4>
+                        <h6>Hân hạnh được phục vụ quý khách, giảng viên và sinh viên !</h6>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <img src="../img/Others/iconMayTinhBang.png" alt="" class="iconMTB">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

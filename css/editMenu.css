@@ -1,0 +1,28 @@
+#choice {
+    text-indent: 50px;
+    line-height: 50px;
+}
+
+#choice a {
+    text-decoration: none;
+    color: rgb(108, 154, 224);
+}
+
+#choice:hover {
+    background-color: rgb(108, 154, 224);
+}
+
+#choice:hover>a {
+    color: rgb(7, 63, 147);
+    text-align: center;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.submenu {
+    display: none;
+}
+
+.menu li:hover>.submenu {
+    display: block;
+}

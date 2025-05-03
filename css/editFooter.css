@@ -1,0 +1,20 @@
+.iconDT {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 161.5px;
+    border: 1px solid black;
+}
+
+.iconMTB {
+    width: 150px;
+    height: 150px;
+    margin-left: 138px;
+    border: 1px solid black;
+}
+
+.col-sm-6 {
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(7, 63, 147);
+}
